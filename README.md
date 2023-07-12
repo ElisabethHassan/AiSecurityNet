@@ -7,7 +7,11 @@ to check this confidence level. Users can simply enter a piece of text and the p
 ## Getting Started
 To run the program, follow these steps...
 1. **Clone the repository:** git clone https://github.com/ElisabethHassan/SeoProject2.git
-2. **Install necessary libraries:** pip install flask, pip install PyPDF2, pip install python-docx
+2. **Install necessary libraries:** 
+   - pip install flask
+   - pip install PyPDF2
+   - pip install python-docx
+   - pip install flask-sqlalchemy
 3. **Run the main.py file**
 4. **Open the Flask link in browser**
 
