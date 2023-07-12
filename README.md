@@ -1,6 +1,21 @@
-## AI Detector
+# AI-Security Net: *An AI Detector*
 
-Uses this api (https://rapidapi.com/developersofchd/api/ai-content-detector2/details)
-to check the confidence of whether an ai was usd to write a piece of text. 
+This program checks the probability of whether an AI has been used to write a piece of text.
+The program uses this api (https://rapidapi.com/vaibhavchandra2007/api/ai-content-detector-ai-gpt/)
+to check this confidence level. Users can simply enter a piece of text and the program will output the results.
 
-Collaborators: Justice, Francisco, Elisabeth
+## Getting Started
+To run the program, follow these steps...
+1. **Clone the repository:** git clone https://github.com/ElisabethHassan/SeoProject2.git
+2. **Install necessary libraries:** pip install flask
+3. **Run the main.py file**
+4. **Open the Flask link in browser**
+
+## Technologies Used
+* Flask
+* Python
+* HTML
+* CSS
+* Bootstrap
+
+**_Collaborators:_** Justice, Francisco, Elisabeth
