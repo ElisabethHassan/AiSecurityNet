@@ -59,7 +59,16 @@ def pdf(file_path):
 
             # Convert JSON data back to a list, then join the list elements to form a string
             text_data = ' '.join(json.loads(json_data))
-            return text_data
+
+            # Formats the JSON properly by removing new line and adding space
+            final_list = []
+            for i in text_data:
+                final_list.append(i.replace("\n", " "))
+            result = ''
+            for line in final_list:
+                result += line
+
+            return result
     except Exception as e:
         # Print error message if an exception occurs
         print("The following error occurred: " + str(e))
