@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>AI-SecurityNet - Analysis</title>
     <style>
         body {
@@ -8,6 +9,7 @@
             background-color: #f8f8f8;
             margin: 0;
             padding: 20px;
+            text-align: center;
         }
 
         h1 {
@@ -35,15 +37,38 @@
         button:hover {
             background-color: #1f69d1;
         }
+        
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
     <h1>AI-SecurityNet - Analysis</h1>
 
-    <p>AI Probability: {{ ai_prob }}%</p>
-    <p>Human Probability: {{ human_prob }}%</p>
-    <p>Total Words: {{ total_words }}</p>
-    <p>AI Words: {{ ai_words }}</p>
+    <div class="card center">
+        <div class="card-body">
+            <p>AI Probability: {{ ai_prob }}%</p>
+            <p>Human Probability: {{ human_prob }}%</p>
+            <p>Total Words: {{ total_words }}</p>
+            <p>AI Words: {{ ai_words }}</p>
+
+            <br>
+            {% if ai_prob == 00 %}
+            <h5>This is human generated content. </h5>
+            {% elif ai_prob < 50 %}
+            <h5>This is likely human generated content. &#128513</h5>
+            {% elif  ai_prob > 50 and ai_prob < 70 %}
+            <h5>It's unclear whether an AI or human generated content. &#128528</h5>
+            {% else %}
+            <h5>This is likely AI generated content. &#128532</h5>
+            {% endif %}
+        </div>
+    </div>
+
+    <br>
 
     <button onclick="goBack()">Go Back</button>
 
