@@ -15,10 +15,9 @@ To run the program, please follow these steps:
 2. **Install necessary libraries:**
 
    ```bash
+   pip install requests
    pip install flask
    pip install PyPDF2
-   pip install python-docx
-   pip install flask-sqlalchemy
    ```
 
 3. **Run the main.py file**
